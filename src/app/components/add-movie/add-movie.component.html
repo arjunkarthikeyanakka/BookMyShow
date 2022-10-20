@@ -1,0 +1,15 @@
+<div>
+    <form class="form" [formGroup]="movie" (ngSubmit)="onSubmit()">
+        
+        <label for="name">Movie title</label>
+        <input type="text" formControlName="name">
+
+        <label for="rating">Imdb Rating</label>
+        <input type="number" formControlName="rating">
+        
+        <label for="poster">Movie Poster</label>
+        <input type="text" formControlName="poster">
+
+        <button class="btn btn-success" type="submit" >add movie</button>
+    </form>
+</div>

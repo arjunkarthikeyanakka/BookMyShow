@@ -1,0 +1,18 @@
+<div class="container m-5 d-block mx-auto">
+    <div class="row">
+        <div class="card m-3 p-1 col-3 border-dark" *ngFor="let i of list" style="width: 18rem;">
+            <img [src]="i.poster" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h2 class="card-title">{{i.name}}</h2>
+                <p class="card-text">
+                    <p>IMDB Rating : {{i.rating}}</p>
+                    <p>Shows available : {{i.details.length}}</p>
+                <!-- </p> -->
+                <a (click)="Book(i)" *ngIf="hasloggedin" class="btn btn-primary m-1">book</a>
+                <a (click)="Edit(i)" *ngIf="isadmin" class="btn btn-warning m-1">add show</a>
+                <a (click)="remove(i)" *ngIf="isadmin" class="btn btn-danger m-1">delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

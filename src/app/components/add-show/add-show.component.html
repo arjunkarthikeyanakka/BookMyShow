@@ -1,0 +1,20 @@
+<div>
+    <form class="form" [formGroup]="show" (ngSubmit)="onSubmit()">
+        <label for="tickets">Number of Tickets available</label>
+        <input type="number" formControlName="tickets">
+        
+        <label for="timings">show timings</label>
+            <select name="timings" formControlName="timings">
+                <option value="Morning">Morning</option>
+                <option value="Matinee">Matinee</option>
+                <option value="Evening">Evening</option>
+                <option value="Night">Night</option>
+            </select>
+
+        <label for="theatre">Theatre</label>
+        <input type="text" formControlName="theatre">
+
+        <button class="btn btn-success" type="submit" >add show</button>
+
+    </form>
+</div>

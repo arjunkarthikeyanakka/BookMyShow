@@ -1,0 +1,21 @@
+<div class="main">
+    <div class="left">
+        <img [src]="movie.poster" alt="" srcset="">
+    </div>
+    <div class="right">
+        <div class="title">{{movie.name}}</div>
+        <div class="show" *ngFor="let show of movie.details;let i=index">
+
+            <h3>venue : {{show.theatre}}</h3>
+            <h3>show @ {{show.timings}}</h3>
+            <h3>{{show.tickets}} tickets left</h3>
+        
+            <form [formGroup]="bookingform">
+                <input class="inp" type="number" placeholder="enter tickets" formControlName="quantity">
+            </form>
+            <button (click)="bookTickets(i)">
+                Book tickets
+            </button>
+        </div>
+    </div>
+</div>

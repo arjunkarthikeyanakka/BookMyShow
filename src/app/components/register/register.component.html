@@ -1,0 +1,16 @@
+<!-- <p>register works!</p> -->
+<div>
+    <form class="form" [formGroup]="user" (ngSubmit)="onSubmit()">
+        
+        <label for="username">Username</label>
+        <input type="text" formControlName="username" autocomplete="off">
+
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" autocomplete="off">
+
+        <label for="cpassword">Confirm Password</label>
+        <input type="password" formControlName="cpassword" autocomplete="off">
+
+        <button class="btn btn-success" type="submit">Sign Up</button>
+    </form>
+</div>
